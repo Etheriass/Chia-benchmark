@@ -1,0 +1,12 @@
+bladebit/
+chia-blockchain/
+chia-venv/
+chiapos/
+chiavdf/
+
+plot/final/*
+plot/tmp/*
+
+logs/
+
+__pycache__/

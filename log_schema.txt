@@ -1,0 +1,41 @@
+Starting phase 1/4: Forward propagation
+  - Computing table 1
+    - Forward propagation table time: x.xxx seconds. CPU (x%).
+  - Computing table 2
+    - Forward propagation table time: x.xxx seconds. CPU (x%).
+  - Computing table 3
+  ...
+  Time for phase 1 = x seconds. CPU (x%)
+
+Starting phase 2/4: Backpropagation:
+  - Backpropagating on table 7
+    - scanned time =  x seconds. CPU (x%)
+  - Backpropagating on table 6
+    - scanned time =  x seconds. CPU (x%)
+  ...
+  - Backpropagating on table 2
+    - scanned time =  x seconds. CPU (x%)
+  - table 1 new size: x
+  Time for phase 2 = x seconds. CPU (x%)
+  Wrote: x
+
+Starting phase 3/4: Compression
+  - Compressing tables 1 and 2
+    - First computation pass time: x seconds. CPU (x%)
+    - Second computation pass time: x seconds. CPU (x%)
+    - Wrote x entries
+  Total compress table time: x seconds. CPU (x%)
+  - Compressing tables 2 and 3
+    - First computation pass time: x seconds. CPU (x%)
+    - Second computation pass time: x seconds. CPU (x%)
+    - Wrote x entries
+  Total compress table time: x seconds. CPU (x%)
+  ...
+  Time for phase 3 = x seconds. CPU (x%)
+
+Starting phase 4/4: Write Checkpoint tables
+  Time for phase 4 = x seconds. CPU (x%)
+  Approximate working space used (without final file): x GiB
+  Final File size: x GiB
+  Total time = x seconds. CPU (x%)
+
