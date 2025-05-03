@@ -1,0 +1,223 @@
+{
+    "Parameters": {
+        "k": "28",
+        "buffer_size": "4608MiB",
+        "buckets": "64",
+        "nb_threads": null,
+        "compression": null
+    },
+    "Phase 1": {
+        "1": {
+            "Forward propagation": {
+                "time": "5.68",
+                "cpu": "165.01"
+            }
+        },
+        "2": {
+            "Forward propagation": {
+                "time": "24.857",
+                "cpu": "455.550"
+            }
+        },
+        "3": {
+            "Forward propagation": {
+                "time": "31.353",
+                "cpu": "391.150"
+            }
+        },
+        "4": {
+            "Forward propagation": {
+                "time": "37.998",
+                "cpu": "365.890"
+            }
+        },
+        "5": {
+            "Forward propagation": {
+                "time": "37.222",
+                "cpu": "373.750"
+            }
+        },
+        "6": {
+            "Forward propagation": {
+                "time": "34.741",
+                "cpu": "386.450"
+            }
+        },
+        "7": {
+            "Forward propagation": {
+                "time": "28.176",
+                "cpu": "424.270"
+            }
+        }
+    },
+    "Phase 2": {
+        "7": {
+            "Backpropagation scanned": {
+                "time": "1.033",
+                "cpu": "100.010"
+            }
+        },
+        "6": {
+            "Backpropagation scanned": {
+                "time": "3.716",
+                "cpu": "99.990"
+            },
+            "Backpropagation sort": {
+                "time": "12.804",
+                "cpu": "99.990"
+            }
+        },
+        "5": {
+            "Backpropagation scanned": {
+                "time": "3.822",
+                "cpu": "99.850"
+            },
+            "Backpropagation sort": {
+                "time": "12.246",
+                "cpu": "99.990"
+            }
+        },
+        "4": {
+            "Backpropagation scanned": {
+                "time": "3.857",
+                "cpu": "99.110"
+            },
+            "Backpropagation sort": {
+                "time": "12.423",
+                "cpu": "99.980"
+            }
+        },
+        "3": {
+            "Backpropagation scanned": {
+                "time": "4.337",
+                "cpu": "91.090"
+            },
+            "Backpropagation sort": {
+                "time": "12.315",
+                "cpu": "99.220"
+            }
+        },
+        "2": {
+            "Backpropagation scanned": {
+                "time": "4.255",
+                "cpu": "92.720"
+            },
+            "Backpropagation sort": {
+                "time": "11.982",
+                "cpu": "99.950"
+            }
+        }
+    },
+    "Phase 3": {
+        "1-2": {
+            "First computation pass": {
+                "time": "22.341",
+                "cpu": "98.150"
+            },
+            "Second computation pass": {
+                "time": "14.853",
+                "cpu": "99.900"
+            },
+            "Total compress table": {
+                "time": "37.248",
+                "cpu": "98.850"
+            }
+        },
+        "2-3": {
+            "First computation pass": {
+                "time": "27.997",
+                "cpu": "99.940"
+            },
+            "Second computation pass": {
+                "time": "15.496",
+                "cpu": "99.930"
+            },
+            "Total compress table": {
+                "time": "43.499",
+                "cpu": "99.940"
+            }
+        },
+        "3-4": {
+            "First computation pass": {
+                "time": "29.284",
+                "cpu": "99.890"
+            },
+            "Second computation pass": {
+                "time": "15.871",
+                "cpu": "99.980"
+            },
+            "Total compress table": {
+                "time": "45.162",
+                "cpu": "99.920"
+            }
+        },
+        "4-5": {
+            "First computation pass": {
+                "time": "30.109",
+                "cpu": "98.820"
+            },
+            "Second computation pass": {
+                "time": "16.392",
+                "cpu": "99.990"
+            },
+            "Total compress table": {
+                "time": "46.511",
+                "cpu": "99.230"
+            }
+        },
+        "5-6": {
+            "First computation pass": {
+                "time": "32.158",
+                "cpu": "96.240"
+            },
+            "Second computation pass": {
+                "time": "17.096",
+                "cpu": "99.990"
+            },
+            "Total compress table": {
+                "time": "49.261",
+                "cpu": "97.540"
+            }
+        },
+        "6-7": {
+            "First computation pass": {
+                "time": "20.236",
+                "cpu": "95.040"
+            },
+            "Second computation pass": {
+                "time": "19.670",
+                "cpu": "99.980"
+            },
+            "Total compress table": {
+                "time": "39.921",
+                "cpu": "97.480"
+            }
+        }
+    },
+    "Phases times": {
+        "1": {
+            "time": "200.043",
+            "cpu": "388.520"
+        },
+        "2": {
+            "time": "88.523",
+            "cpu": "99.040"
+        },
+        "3": {
+            "time": "261.607",
+            "cpu": "98.830"
+        },
+        "4": {
+            "time": "17.899",
+            "cpu": "99.950"
+        }
+    },
+    "Final Stats": [
+        {
+            "stat_type": "Total time",
+            "value": "568.075",
+            "unit": "seconds",
+            "cpu": "200.910"
+        }
+    ]
+}

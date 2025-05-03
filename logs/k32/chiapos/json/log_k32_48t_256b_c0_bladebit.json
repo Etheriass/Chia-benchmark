@@ -1,0 +1,14 @@
+{
+    "Parameters": {
+        "k": "3.1.1-dev",
+        "buffer_size": "b6a929c6fc4e43598c4d6a50787bd07f48078cdd",
+        "buckets": "With:",
+        "nb_threads": null,
+        "compression": null
+    },
+    "Phase 1": {},
+    "Phase 2": {},
+    "Phase 3": {},
+    "Phases times": {},
+    "Final Stats": []
+}
