@@ -1,9 +1,0 @@
-~/chia-project/
-├── chia-venv/
-├── chia-blockchain/
-├── chiapos/
-└── chiavdf/
-
-
-
-sudo apt install -y linux-tools-common linux-tools-generic linux-tools-$(uname -r) valgrind kcachegrind g++

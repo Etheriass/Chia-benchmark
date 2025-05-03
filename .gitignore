@@ -7,6 +7,8 @@ chiavdf/
 plot/final/*
 plot/tmp/*
 
-logs/
+# logs/
+
+note.txt
 
 __pycache__/

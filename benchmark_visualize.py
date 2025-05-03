@@ -6,7 +6,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 
-K = 28
+K = 32
 PLOTTER = "chiapos" # "bladebit"
 
 def get_metrics_json(json_file):
@@ -231,7 +231,7 @@ def plot_metrics(json_files):
         df = pd.read_csv(csv_file, sep=',', header=0)
         df['timestamp'] = pd.to_datetime(df['timestamp'], format='%H:%M:%S')
         df['timestamp'] = (df['timestamp'] - df['timestamp'].min()).dt.total_seconds()
-        df = smoothen_df(df, window_size=5)
+        df = smoothen_df(df, window_size=100)
 
         # Plot write_MBps
         sns.lineplot(ax=axes3[0, 0], x=df['timestamp'], y=df['write_MBps'], label=file_name_to_label(csv_file), color=palette[i])
@@ -292,7 +292,7 @@ def smoothen_df(df, window_size=5):
     return smoothed_df
 
 def select_files(json_files):
-    PATTERN = '16' #'128b'
+    PATTERN = 'c0.' #'128b'
     selected_files = []
     for file in json_files:
         if PATTERN in file:

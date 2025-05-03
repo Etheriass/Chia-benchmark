@@ -3,8 +3,7 @@ import re
 import json
 import glob
 
-
-K = 28
+K = 32
 PLOTTER = "chiapos"
 LOGS_DIR = "logs"
 
@@ -32,11 +31,6 @@ def parse_chia_log(log_file_path):
     data["Parameters"]["k"] = log_lines[3].split(":")[1].strip()
     data["Parameters"]["buffer_size"] = log_lines[4].split(":")[1].strip()
     data["Parameters"]["buckets"] = log_lines[5].split()[1].strip()
-    # data["Parameters"]["nb_threads"] = log_lines[8].split(":")[1].strip()
-    # data["Parameters"]["k"] = log_lines[5].split(":")[1].strip()
-    # data["Parameters"]["buffer_size"] = log_lines[6].split(":")[1].strip()
-    # data["Parameters"]["buckets"] = log_lines[7].split()[1].strip()
-    # data["Parameters"]["nb_threads"] = log_lines[10].split(":")[1].strip()
 
     phase_1_table = re.compile(r'Computing table (\d+)')
     phase_1_table_time = re.compile(r'Forward propagation table time: (\d+(?:\.\d+)?) seconds\. CPU \((\d+(?:\.\d+)?)%\)')
@@ -169,7 +163,6 @@ def save_to_json(data, file_path):
         json.dump(data, json_file, indent=4)
 
 
-
 if __name__ == "__main__":
     log_files = glob.glob(os.path.join(LOGS_DIR,'k'+str(K),PLOTTER, "output", "*.txt"), recursive=True)
     for log_file in log_files:
@@ -177,6 +170,3 @@ if __name__ == "__main__":
         save_to_json(data, log_file)
         print(f"Parsed {log_file} and saved to JSON.")
     print(f"Parsed {log_file} and saved to JSON.")
-
-# . ./chia-blockchain/activate
-# python benchmark_chia_plot.py --plotter_path ~/chia-project/chiapos --threads 8 --buckets 64 --tmp_dir ../plot/tmp --dst_dir ../plot/final  --k 25

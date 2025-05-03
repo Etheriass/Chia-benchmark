@@ -5,8 +5,7 @@ import time
 import psutil 
 from benchmark_log_parser import parse_chia_log, save_to_json
 
-LOGS_DIR = "logs"
-# TARGET_DEVICES = ["nvme0n1"] #, "sda", "sdb"]  
+LOGS_DIR = "logs" 
 MONITOR_INTERVAL = 1  # seconds
 
 def monitor_process(pid, output_file, stop_event):
@@ -25,7 +24,7 @@ def monitor_process(pid, output_file, stop_event):
             timestamp = time.strftime("%H:%M:%S")
 
             try:
-                # Get parent + children
+                # parent + children
                 procs = [proc] + proc.children(recursive=True)
 
                 # CPU (waits 0.5s)
@@ -109,7 +108,6 @@ def run_plotter(k, threads, buckets, plotter, compression=0, to_json=True, tmp_d
 
     print("Running command:", " ".join(plot_cmd))
     
-    # Start plotting as a subprocess
     proc = subprocess.Popen(plot_cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     
     stop_event = threading.Event()
@@ -121,7 +119,6 @@ def run_plotter(k, threads, buckets, plotter, compression=0, to_json=True, tmp_d
     )
     monitor_thread.start()
 
-    # Save plotting output
     with open(log_file_path, "w") as f:
         for line in iter(proc.stdout.readline, b''):
             f.write(line.decode())
